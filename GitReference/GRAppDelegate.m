@@ -7,6 +7,7 @@
 //
 
 #import "GRAppDelegate.h"
+#import "GRViewController.h"
 
 @implementation GRAppDelegate
 
@@ -16,6 +17,11 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    // Step 0 - Instantiate a ViewController and set it as the root
+    GRViewController *viewController = [GRViewController new];
+    self.window.rootViewController = viewController;
+    
     return YES;
 }
 
